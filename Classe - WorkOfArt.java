@@ -1,41 +1,39 @@
-pacote  com.example.agendiario ;
+package com.example.agendiario;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+
+@Entity(tableName = "arts")
 
 
 
-import  androidx.annotation.NonNull ;
-import  androidx.annotation.Nullable ;
-importar  androidx.room.ColumnInfo ;
-importar  androidx.room.Entity ;
-importar  androidx.room.PrimaryKey ;
-
-
-@Entity ( tableName  =  " arts " )
-
-
-
- WorkOfArt de classe  pública {
+public class WorkOfArt {
 
  
-    @PrimaryKey ( autoGenerate  =  true )
+    @PrimaryKey(autoGenerate = true)
     @NonNull
-    @ColumnInfo ( name  =  " artsId " )
-    private  int mId;
+    @ColumnInfo(name = "artId")
+    private int mId;
 
     @Nullable
-    @ColumnInfo ( name  =  " artsName " )
-    private  String mName;
+    @ColumnInfo(name = "artName")
+    private String mName;
 
     private  String mLocation;
 
-    públicas  WorkOfArt ( @Nullable  Cordas  título , Cordas  personage , int  score , Cordas  creationDate ) {
-        mName = nome;
-        mLocation = Localização ;
-        mScore = pontuação;
-        mCreationDate = creationDate;
+     public WorkOfArt(@Nullable String name, String location , int score, String creationDate) {
+        this.mName = name;
+        this.mLocation = location;
+        this.mScore = score;
+        this.mCreationDate = creationDate;
     }
 
     public  int  getId () {
-        return mID;
+        return mId;
     }
 
     public  void  setId ( int  id ) {
@@ -46,24 +44,24 @@ importar  androidx.room.PrimaryKey ;
         return mName;
     }
 
-    public  void  setName ( Nome da string  ) {
-        mName = nome;
+    public  void  setName ( String name  ) {
+        mName = name;
     }
 
     public  String  getLocation () {
-        retornar mLocation;
+        return mLocation;
     }
 
-    public  void  setLocation ( Localização da string  ) {
-        mPersonage = Localização;
+    public void setLocation(String location) {
+        this.mLocation = location;
     }
 
     public  int  getScore () {
-        retornar mScore;
+        return mScore;
     }
 
-    público  vazio  setScore ( int  score ) {
-        mScore = pontuação;
+ public void  setScore ( int  score ) {
+        mScore = score;
     }
 
     public  String  getCreationDate () {
